@@ -11,8 +11,11 @@ net = feedforwardnet(8);
 %algorytm wstecznej propagacji
 net.trainFcn = 'traingd';
 
+% manipulujemy wspolczynnikiem  0.5 0.1 0.01
+%net.trainParam.mu = 0.1;
+
 % manipulujemy wspolczynnikiem uczenia 0.5 0.1 0.01
-net.trainParam.mu = 0.1;
+net.trainParam.lr = 0.1;
 
 % manipulujemy wspolczynnikiem bezwladnośsci 0.0 0.5 1
 net.trainParam.mc = 0.5;
